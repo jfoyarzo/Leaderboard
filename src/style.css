@@ -42,3 +42,16 @@ main {
 input {
   margin-bottom: 1.5em;
 }
+
+@media (min-width: 768px) {
+  .results-wrapper {
+    width: 50%;
+  }
+
+  .form-wrapper {
+    width: 50%;
+    padding-top: 0;
+    padding-left: 2em;
+    align-items: flex-start;
+  }
+}
