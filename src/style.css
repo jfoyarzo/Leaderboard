@@ -3,14 +3,42 @@
 }
 
 header h1 {
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 main {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .results-wrapper {
-  width: 50%;
-  padding: 2em;
+  width: 100%;
+  padding: 0 3em 0 3em;
+}
+
+.results-wrapper h2 {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.results {
+  border: 2px solid black;
+  height: 40vh;
+}
+
+.form-wrapper {
+  width: 100%;
+  padding-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1.5em;
 }
