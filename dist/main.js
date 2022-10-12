@@ -116,7 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_dom_manipulation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dom_manipulation.js */ \"./src/modules/dom_manipulation.js\");\n\n\n\n(0,_modules_dom_manipulation_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/api_request.js":
+/*!************************************!*\
+  !*** ./src/modules/api_request.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/w5H6szVjLJnxg4RoIDTw/scores/';\n\nconst getScores = async () => {\n  const { result } = await fetch(url).then((response) => response.json());\n  return result;\n};\n\nconst postScore = () => {\n  \n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/api_request.js?");
+
+/***/ }),
+
+/***/ "./src/modules/dom_manipulation.js":
+/*!*****************************************!*\
+  !*** ./src/modules/dom_manipulation.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api_request_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api_request.js */ \"./src/modules/api_request.js\");\n\n\nconst displayScores = async () => {\n  const scores = await (0,_api_request_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  const resultsBox = document.querySelector('.results');\n  const fragment = new DocumentFragment();\n  const paragraph = document.createElement('p');\n  if (scores.length === 0) {\n    paragraph.innerText = 'No scores yet, submit yours using the form!';\n    resultsBox.append(paragraph);\n  } else {\n    scores.forEach((element) => {\n      const { user, score } = element;\n      paragraph.classList.add('score');\n      paragraph.innerText = `${user}: ${score}`;\n      fragment.append(paragraph);\n    });\n    resultsBox.append(fragment);\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/dom_manipulation.js?");
 
 /***/ })
 
