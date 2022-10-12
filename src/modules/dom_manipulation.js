@@ -1,4 +1,4 @@
-import getScores from './api_request.js';
+import { getScores, postScore } from './api_request.js';
 
 const displayScores = async () => {
   const scores = await getScores();
@@ -18,5 +18,9 @@ const displayScores = async () => {
     resultsBox.append(fragment);
   }
 };
+
+const addScore = () => {
+  
+}
 
 export default displayScores;

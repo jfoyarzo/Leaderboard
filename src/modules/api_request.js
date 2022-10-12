@@ -5,8 +5,10 @@ const getScores = async () => {
   return result;
 };
 
-const postScore = () => {
-  
-}
+const postScore = async (user, score) => {
+  const data = { user, score };
+  const { result } = await fetch(url, { method: 'POST', body: JSON.stringify(data) }).then((response) => response.json());
+  return result;
+};
 
-export default getScores;
+export { getScores, postScore };
