@@ -56,6 +56,7 @@ button:hover {
 
 input {
   height: 2rem;
+  margin-bottom: 1.5em;
 }
 
 .score {
@@ -78,10 +79,6 @@ input {
 .form-wrapper form {
   display: flex;
   flex-direction: column;
-}
-
-input {
-  margin-bottom: 1.5em;
 }
 
 @media (min-width: 768px) {
