@@ -23,7 +23,7 @@ main {
 
 .results {
   border: 2px solid black;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .form-wrapper {

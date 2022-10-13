@@ -7,7 +7,14 @@ const getScores = async () => {
 
 const postScore = async (user, score) => {
   const data = { user, score };
-  const { result } = await fetch(url, { method: 'POST', body: JSON.stringify(data) }).then((response) => response.json());
+  const result = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json());
   return result;
 };
 
