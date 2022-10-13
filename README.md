@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> First stage of the Leaderboard project, which will consume data from the leaderboard API and display it on the site
+A leaderboard App that consumes the names and scores of users from an API and displays it on the site
 
 
 ## Built With
@@ -25,7 +25,7 @@ To get a local copy, run the following command.
 
 ### Install
 
-To instal dependencies run
+To install dependencies run
 `npm install `
 
 ### Usage
