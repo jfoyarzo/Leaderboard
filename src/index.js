@@ -10,5 +10,4 @@ refreshBtn.addEventListener('click', displayScores);
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addScore();
-  displayScores();
 });
