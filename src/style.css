@@ -23,7 +23,8 @@ main {
 
 .results {
   border: 2px solid black;
-  min-height: 40vh;
+  height: 40vh;
+  overflow-y: auto;
 }
 
 .form-wrapper {

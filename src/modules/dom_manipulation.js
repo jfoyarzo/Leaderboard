@@ -21,10 +21,10 @@ const displayScores = async () => {
   }
 };
 
-const addScore = () => {
+const addScore = async () => {
   const inputs = document.querySelector('form').elements;
   const [user, score] = [inputs[0].value, inputs[1].value];
-  postScore(user, score);
+  await postScore(user, score);
   inputs[0].value = '';
   inputs[1].value = '';
   displayScores();
