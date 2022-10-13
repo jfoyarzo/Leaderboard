@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-A leaderboard App that consumes the names and scores of users from an API and displays it on the site
+A leaderboard Web app that consumes the names and scores of users from an API and displays it on the site
 
 
 ## Built With
