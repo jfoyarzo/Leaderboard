@@ -87,6 +87,24 @@ input {
     margin-left: 2rem;
   }
 
+  button {
+    width: 8vw;
+    height: 2.5rem;
+  }
+
+  input {
+    width: 15vw;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0 0.4rem;
+  }
+
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .results-wrapper {
     width: 50%;
   }

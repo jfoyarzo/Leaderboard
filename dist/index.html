@@ -15,15 +15,17 @@
     </header>
     <main>
         <div class="results-wrapper">
+            <div class="results-header">
             <h2>Recent scores</h2>
             <button type="button" id="refresh">Refresh</button>
+        </div>
             <div class="results"></div>
         </div>
         <div class="form-wrapper">
             <h2>Add your score</h2>
             <form>
-                <input type="text" placeholder="Your name" name="name">
-                <input type="text" placeholder="Your score" name="score">
+                <input type="text" placeholder="Your name" name="name" required>
+                <input type="text" placeholder="Your score" name="score" required>
                 <button type="submit" id="submit">Submit</button>
             </form>
         </div>
