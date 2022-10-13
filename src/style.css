@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;600&family=Press+Start+2P&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: 'Azeret Mono', monospace;
+}
+
+h2 {
+  font-size: 1.35rem;
 }
 
 header h1 {
-  margin-left: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
 }
 
 main {
@@ -23,8 +32,39 @@ main {
 
 .results {
   border: 2px solid black;
+  border-radius: 10px;
   height: 40vh;
   overflow-y: auto;
+}
+
+button {
+  padding: 0.7em;
+  background-color: lightgreen;
+  border: 1px;
+  border-radius: 5px;
+  width: 20vw;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(127, 209, 127);
+}
+
+#submit {
+  align-self: center;
+}
+
+input {
+  height: 2rem;
+}
+
+.score {
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.score:nth-child(even) {
+  background-color: lightgray;
 }
 
 .form-wrapper {
@@ -45,6 +85,11 @@ input {
 }
 
 @media (min-width: 768px) {
+  header h1 {
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+
   .results-wrapper {
     width: 50%;
   }
